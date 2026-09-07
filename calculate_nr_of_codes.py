@@ -25,7 +25,7 @@ Input : in_parameters.txt   (semicolon-separated: n ; k  ->  codons ; different 
         The input file can list different several pairs of n and k, each pair per line.
         If this file does not exist, it is created automatically with the
         default pair (64 codons ; 21 outputs) shown above.
-Output: calculated_nr_of_codes.txt   (n ; k ; possible codes  ->  codons ; amino acids ; codes)
+Output: calculated_nr_of_codes.txt   (n ; k ; possible codes  ->  codons ; encoded outputs ; codes)
 Dr. Royal Truman 
 """
 
@@ -120,7 +120,7 @@ def main() -> None:
 
     with open(INPUT_FILE, encoding="utf-8") as f:
         next(f, None)  # skip the title header row
-        # Each remaining line holds one n and k pair (codons ; amino acids); the
+        # Each remaining line holds one n and k pair (codons ; encoded outputs); the
         # input file may contain a whole list of such pairs to be computed.
         for line_no, raw in enumerate(f, start=2):
             line = raw.strip()
