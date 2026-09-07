@@ -1,0 +1,2 @@
+number of codons;number of encoded outputs;possible number of codes
+64;21;1.5101095158e+84
