@@ -59,7 +59,7 @@ number of codons;number of encoded outputs
 Results are written to `calculated_nr_of_codes.txt` (and echoed to the console) with a header and one row per valid input pair:
 
 ```
-number of codons;number of amino acids;possible number of codes
+number of codons;number of encoded outputs;possible number of codes
 64;21;1.5101095158e+84
 64;20;8.1492025012e+82
 10;4;8.1852000000e+5
@@ -71,9 +71,9 @@ The number of decimal places in the scientific notation is controlled by the `DE
 
 Each input pair is checked before it is computed. A row is reported as an error and skipped if:
 
-- the number of amino acids is not greater than 1,
-- the number of codons is not greater than 1, or
-- there are more amino acids than codons (impossible, since every amino acid must be used at least once).
+- the number of coded outputs is not >= 1,
+- the number of codons is not >= 1, or
+- there are more coded outputs than codons.
 
 Lines that cannot be parsed as two integers are also reported and skipped, so one bad row does not stop the rest of the file from being processed.
 
@@ -88,7 +88,7 @@ A few constants near the top of the script can be adjusted:
 | `DECIMALS` | `10` | Decimal places in the scientific-notation output |
 | `SEP` | `;` | Field separator used in both files |
 | `DEFAULT_N` | `64` | Default number of codons used to seed a missing input file |
-| `DEFAULT_K` | `21` | Default number of amino acids used to seed a missing input file |
+| `DEFAULT_K` | `21` | Default number of coded outputs used to seed a missing input file |
 
 ## Example
 
