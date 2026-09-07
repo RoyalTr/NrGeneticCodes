@@ -46,7 +46,7 @@ DEFAULT_K = 21         # number of outputs
 DEFAULT_N = 64         # number of codons
 
 # Title row expected as the first line of the input file (it is skipped when read).
-INPUT_HEADER = SEP.join(["number of codons", "number of encoded outputs"])
+INPUT_HEADER = SEP.join(["number of codons, n", "number of encoded outputs"])
 
 
 def ensure_input_file() -> None:
