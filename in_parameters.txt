@@ -1,3 +1,0 @@
-number of codons;number of amino acids
-64;21
-64;22
